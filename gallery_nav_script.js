@@ -62,12 +62,12 @@ document.addEventListener("DOMContentLoaded", function() {
         updateImages(currentIndex);
     });
 
-    document.getElementById("yui3-widget yui3-block-base yui3-block-parent-base sqs-block-html sqs-block html-block sqs-block-editable sqs-block-focused").addEventListener("click", function() {
+    document.getElementById("esthetic-treatment-title").addEventListener("click", function() {
         currentIndex = (currentIndex + 1) % leftImages.length; // Wrap around to the first image if needed
         updateTitle(currentIndex);
     });
 
-    document.getElementById("yui3-widget yui3-block-base yui3-block-parent-base sqs-block-html sqs-block html-block sqs-block-editable").addEventListener("click", function() {
+    document.getElementById("esthetic-treatment-description").addEventListener("click", function() {
         currentIndex = (currentIndex + 1) % leftImages.length; // Wrap around to the first image if needed
         updateDescription(currentIndex);
     });
