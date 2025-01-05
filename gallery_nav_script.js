@@ -1,13 +1,3 @@
-<link rel="stylesheet" type="text/css" href="https://nativ18.github.io/image-comparison-slider/image-comparison-slider.css">
-
-<div class="image-spliter">
-    <div class="mover"></div>
-    <img class="img-left" src="https://images.squarespace-cdn.com/content/6769debcb704bd19bef657cf/8fe80bc2-891c-416a-8cd1-5a0e69e6d8b2/before.jpeg?content-type=image%2Fjpeg">
-    <img class="img-right" src="https://images.squarespace-cdn.com/content/6769debcb704bd19bef657cf/50a99eeb-f371-400f-91a1-9a7799d9b540/after.jpeg?content-type=image%2Fjpeg">
-</div>
-
-<script src="https://nativ18.github.io/image-comparison-slider/image-comparison-slider.js"></script>
-
 <script>
   // Ensure DOM is fully loaded before manipulating elements
   document.addEventListener("DOMContentLoaded", function() {
