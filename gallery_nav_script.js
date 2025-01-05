@@ -15,8 +15,8 @@
   let currentIndex = 0; // Start with the first set of images
 
   // References to the img-left and img-right elements
-  const imgLeft = document.querySelector(".img-left");
-  const imgRight = document.querySelector(".img-right");
+  const imgLeft = document.querySelector("img-left");
+  const imgRight = document.querySelector("img-right");
 
   // Function to update the images
   function updateImages(index) {
