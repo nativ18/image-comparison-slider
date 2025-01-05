@@ -38,13 +38,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateTitle(index) {
         console.log("Updating title to index:", index);
-        treatmentTitleText.textContent = titleText[index];
+        treatmentTitleText.text = titleText[index];
     }
 
     
     function updateDescription(index) {
         console.log("Updating description to index:", index);
-        descriptionTitleText.textContent = descriptionText[index];
+        descriptionTitleText.text = descriptionText[index];
     }
 
     // Add event listeners to buttons (ensure they are present in the HTML)
