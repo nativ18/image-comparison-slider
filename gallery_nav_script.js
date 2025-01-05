@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function updateTitle(index) {
         console.log("Updating title to index:", index);
-        document.getElementById("esthetic-treatment-title").textContent = titleText[index];
+        document.getElementById("esthetic-treatment-title").innerText = titleText[index];
     }
 
     
