@@ -15,23 +15,28 @@
   let currentIndex = 0; // Start with the first set of images
 
   // References to the img-left and img-right elements
-  const imgLeft = document.querySelector("img-left");
-  const imgRight = document.querySelector("img-right");
+  const imgLeft = document.querySelector(".img-left"); // Fixed query selector
+  const imgRight = document.querySelector(".img-right"); // Fixed query selector
 
   // Function to update the images
   function updateImages(index) {
+    console.log("Updating images to index:", index);
     imgLeft.src = leftImages[index];
     imgRight.src = rightImages[index];
+    console.log("Left image src:", imgLeft.src);
+    console.log("Right image src:", imgRight.src);
   }
 
   // Previous button click event
-  document.getElementById("prev-btn-1").addEventListener("click", function () {
+  document.getElementById("prev-btn").addEventListener("click", function () {
+    console.log("Previous button clicked");
     currentIndex = (currentIndex - 1 + leftImages.length) % leftImages.length; // Wrap around to the last image if needed
     updateImages(currentIndex);
   });
 
   // Next button click event
-  document.getElementById("next-btn-1").addEventListener("click", function () {
+  document.getElementById("next-btn").addEventListener("click", function () {
+    console.log("Next button clicked");
     currentIndex = (currentIndex + 1) % leftImages.length; // Wrap around to the first image if needed
     updateImages(currentIndex);
   });
