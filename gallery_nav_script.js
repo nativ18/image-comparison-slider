@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
         imgRight.src = rightImages[index];
         console.log("Left image src:", imgLeft.src);
         console.log("Right image src:", imgRight.src);
+        updateTitle(index);
+        updateDescription(index);
     }
 
     function updateTitle(index) {
@@ -58,15 +60,5 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Next button clicked");
         currentIndex = (currentIndex + 1) % leftImages.length; // Wrap around to the first image if needed
         updateImages(currentIndex);
-    });
-
-    document.getElementById("esthetic-treatment-title").addEventListener("click", function() {
-        currentIndex = (currentIndex + 1) % leftImages.length; // Wrap around to the first image if needed
-        updateTitle(currentIndex);
-    });
-
-    document.getElementById("esthetic-treatment-description").addEventListener("click", function() {
-        currentIndex = (currentIndex + 1) % leftImages.length; // Wrap around to the first image if needed
-        updateDescription(currentIndex);
     });
 });
