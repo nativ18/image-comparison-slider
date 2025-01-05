@@ -25,13 +25,13 @@
   }
 
   // Previous button click event
-  document.getElementById("prev-btn").addEventListener("click", function () {
+  document.getElementById("prev-btn-1").addEventListener("click", function () {
     currentIndex = (currentIndex - 1 + leftImages.length) % leftImages.length; // Wrap around to the last image if needed
     updateImages(currentIndex);
   });
 
   // Next button click event
-  document.getElementById("next-btn").addEventListener("click", function () {
+  document.getElementById("next-btn-1").addEventListener("click", function () {
     currentIndex = (currentIndex + 1) % leftImages.length; // Wrap around to the first image if needed
     updateImages(currentIndex);
   });
