@@ -64,7 +64,7 @@
                 X = e.touches[0].clientX;
 
                 // Adjust clipping
-                imgLeft.style.clip = "rect(0px, " + (parseInt(this.style.left) + moverWidth / 2) + "px, " + height + "px, 0px)";
+                imgLeft.style.clip = "rect(0px, " + (parseInt(this.style.left) - 5 + moverWidth / 2) + "px, " + height + "px, 0px)";
             }
         });
     }
