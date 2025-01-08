@@ -33,7 +33,7 @@ img,
   top: 0;
   left: 50%; /* Initially centered */
   z-index: 10;
-  transform: translate(-50%, 0) rotate(-2deg); /* Counter the -2deg image rotation */
+  transform: translate(-50%, 0) rotate(-10deg); /* Counter the -2deg image rotation */
 }
 
 .mover:before,
@@ -63,5 +63,5 @@ img,
 
 /* Apply -2 degrees rotation to the image */
 .image-spliter img {
-  transform: rotate(-2deg);
+  transform: rotate(-10deg);
 }
