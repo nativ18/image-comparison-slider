@@ -10,7 +10,7 @@
         var height = imgLeft.getBoundingClientRect().height;
 
         // Initialize mover position and clipping
-        mover.style.left = width / 2 - moverWidth / 2 + "px";
+        mover.style.left = width / 2 - moverWidth / 2 + 10 + "px";
         imgLeft.style.clip = "rect(0px, " + width / 2 + "px, 999px, 0px)";
 
         // Add cursor styling explicitly
@@ -82,7 +82,7 @@
             var height = imgLeft.getBoundingClientRect().height;
 
             // Reset position and clipping
-            mover.style.left = width / 2 - moverWidth / 2 + "px";
+            mover.style.left = width / 2 - moverWidth / 2 + 10 + "px";
             imgLeft.style.clip = "rect(0px, " + width / 2 + "px, " + height + "px, 0px)";
         }
     });
