@@ -1,4 +1,3 @@
-@@ -1,66 +1,89 @@
 (function() {
     var elsH = document.querySelectorAll(".image-spliter .mover");
     var i = elsH.length;
