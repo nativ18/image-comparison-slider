@@ -1,7 +1,7 @@
 img {
   width: 100%;
   vertical-align: middle;
-  transform-origin: center; /* Ensure rotation occurs around the center */
+  transform-origin: center; /* Rotate around the center */
 }
 
 .image-spliter,
@@ -31,9 +31,9 @@ img,
   width: 200px;
   height: 100%;
   top: 0;
-  left: 50%; /* Center horizontally */
+  left: 50%; /* Initially centered */
   z-index: 10;
-  transform: translate(-50%, 0) rotate(-2deg); /* Rotate mover by the same angle as the image */
+  transform: translate(-50%, 0) rotate(2deg); /* Counter the -2deg image rotation */
 }
 
 .mover:before,
@@ -64,5 +64,4 @@ img,
 /* Apply -2 degrees rotation to the image */
 .image-spliter img {
   transform: rotate(-2deg);
-  transform-origin: center; /* Ensure proper alignment */
 }
