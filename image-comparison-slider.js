@@ -6,9 +6,9 @@
         var imgLeft = elsH[i].nextElementSibling;
         var width = imgLeft.getBoundingClientRect().width;
         var height = imgLeft.getBoundingClientRect().height;
-        elsH[i].style.left = width / 2 - moverWidth / 2 + 'px';
+        elsH[i].style.left = width / 2 - moverWidth / 2 -10 + 'px';
         //imgLeft.style.clip = "rect(0px, " + width / 2 + "px, " + height + "px, 0px)";
-        imgLeft.style.clip = "rect(0px, " + width / 2 + "px, 999px, 0px)";
+        imgLeft.style.clip = "rect(0px, " + width / 2 - 17 + "px, 999px, 0px)";
         var mouseDownX = 0;
         var X;
         elsH[i].addEventListener("mousedown", function(e) {
@@ -55,8 +55,8 @@
             var imgLeft = elsHre[ii].nextElementSibling;
             var width = imgLeft.getBoundingClientRect().width;
             var height = imgLeft.getBoundingClientRect().height;
-            elsHre[ii].style.left = width / 2 - moverWidth / 2 + 'px';
-            imgLeft.style.clip = "rect(0px, " + width / 2 + "px, " + height + "px, 0px)";
+            elsHre[ii].style.left = width / 2 - moverWidth / 2 - 10 + 'px';
+            imgLeft.style.clip = "rect(0px, " + width / 2 - 17 + "px, " + height + "px, 0px)";
         }
     });
 })();
