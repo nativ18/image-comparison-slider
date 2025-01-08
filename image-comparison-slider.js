@@ -11,7 +11,7 @@
 
         // Initialize mover position and clipping
         mover.style.left = width / 2 - moverWidth / 2 - 10 + "px";
-        imgLeft.style.clip = "rect(0px, " + width / 2 - 20 + "px, 999px, 0px)";
+        imgLeft.style.clip = "rect(0px, " + width / 2 - 23 + "px, 999px, 0px)";
 
         // Add cursor styling explicitly
         mover.style.cursor = "grab";
@@ -83,7 +83,7 @@
 
             // Reset position and clipping
             mover.style.left = width / 2 - moverWidth / 2 - 10 + "px";
-            imgLeft.style.clip = "rect(0px, " + width / 2 - 20 + "px, " + height + "px, 0px)";
+            imgLeft.style.clip = "rect(0px, " + width / 2 - 23 + "px, " + height + "px, 0px)";
         }
     });
 })();
