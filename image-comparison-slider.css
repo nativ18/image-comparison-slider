@@ -8,11 +8,11 @@ img,
 .mover {
   overflow: hidden;
   -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .image-spliter {
@@ -22,36 +22,44 @@ img,
 .img-left {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
 }
 
 .mover {
-  position:absolute;
+  position: absolute;
   width: 200px;
   height: 100%;
   top: 0;
-  left:0;
+  left: 0;
   z-index: 10;
+  cursor: grab; /* Ensure the cursor is visible */
 }
+
 .mover:before,
 .mover:after {
-  position:absolute;
-  left:50%;
+  position: absolute;
+  left: 50%;
   content: "";
   background: #fff;
-  cursor: -webkit-grab;
-@@ -45,14 +48,20 @@
+  cursor: grab; /* Add cursor styling to pseudo-elements */
+}
 
 .mover:before {
   top: 0;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
   width: 1px;
   height: 100%;
 }
+
 .mover:after {
   top: 50%;
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 5px;
   height: 33%;
   border-radius: 5px;
+}
+
+/* Add hover state for better UX */
+.mover:hover {
+  cursor: grabbing; /* Change cursor on hover for feedback */
 }
