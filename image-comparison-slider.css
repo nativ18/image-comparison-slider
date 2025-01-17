@@ -2,52 +2,109 @@ img {
   width: 100%;
   vertical-align: middle;
 }
+
 .image-spliter,
 img,
 .mover {
   overflow: hidden;
   -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
 .image-spliter {
   position: relative;
 }
+
 .img-left {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
 }
+
 .mover {
-  position:absolute;
-  width: 350px;
+  position: absolute;
+  width: 200px;
   height: 100%;
   top: 0;
-  left:0;
+  left: 0;
   z-index: 10;
 }
-.mover:before,
-.mover:after {
-  position:absolute;
-  left:50%;
+
+.mover:before {
+  position: absolute;
   content: "";
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
   background: #fff;
-  cursor: -webkit-grab;
   cursor: grab;
 }
-.mover:before {
-  top: 0;
-  transform:translateX(-50%);
-  width: 1px;
-  height: 100%;
-}
+
 .mover:after {
+  position: absolute;
+  content: "";
+  width: 60px; /* Circular size */
+  height: 60px;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally within the slider */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 50%; /* Circular shape */
+  background: rgba(255, 255, 255, 0.9); /* Light background for visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+/* Add arrows inside the circular handle */
+.mover:after:before,
+.mover:after:after {
+  content: "";
+  position: absolute;
+  width: 8px; /* Width of arrow */
+  height: 8px; /* Height of arrow */
+  border-width: 2px;
+  border-style: solid;
+  border-color: #333; /* Arrow color */
+}
+
+.mover:after:before {
+  transform: rotate(135deg);
+  border-width: 0 2px 2px 0;
   top: 50%;
-  transform:translate(-50%, -50%);
-  width: 5px;
-  height: 33%;
-  border-radius: 5px;
+  left: 15%; /* Adjust positioning to fit inside the circle */
+}
+
+.mover:after:after {
+  transform: rotate(-45deg);
+  border-width: 0 2px 2px 0;
+  top: 50%;
+  right: 15%; /* Adjust positioning to fit inside the circle */
+}
+
+/* Hover effect */
+.mover:after:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* Add arrow icons inside the circle */
+.mover:after {
+  content: "";
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="166px" width="166px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-51.2 -51.2 614.44 614.44" xml:space="preserve" transform="rotate(0)" stroke="%23000000" stroke-width="0.0051204"><g id="SVGRepo_bgCarrier" stroke-width="0" transform="translate(0,0), scale(1)"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="%23CCCCCC" stroke-width="3.07224"></g><g id="SVGRepo_iconCarrier"><g><g><path d="M508.933,248.353L402.267,141.687c-4.267-4.053-10.987-3.947-15.04,0.213c-3.947,4.16-3.947,10.667,0,14.827 l88.427,88.427H36.4l88.427-88.427c4.053-4.267,3.947-10.987-0.213-15.04c-4.16-3.947-10.667-3.947-14.827,0L3.12,248.353 c-4.16,4.16-4.16,10.88,0,15.04L109.787,370.06c4.267,4.053,10.987,3.947,15.04-0.213c3.947-4.16,3.947-10.667,0-14.827 L36.4,266.593h439.147L387.12,355.02c-4.267,4.053-4.373,10.88-0.213,15.04c4.053,4.267,10.88,4.373,15.04,0.213 c0.107-0.107,0.213-0.213,0.213-0.213l106.667-106.667C513.093,259.34,513.093,252.513,508.933,248.353z"></path></g></g></g></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+}
+
+/* Optional: Adjust arrow appearance on hover */
+.mover:hover:after {
+  color: #000;
 }
