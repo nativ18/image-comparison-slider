@@ -2,74 +2,60 @@ img {
   width: 100%;
   vertical-align: middle;
 }
-
 .image-spliter,
 img,
 .mover {
   overflow: hidden;
   -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
-
 .image-spliter {
   position: relative;
 }
-
 .img-left {
   position: absolute;
   top: 0;
-  left: 0;
+  left:0;
 }
-
 .mover {
   position: absolute;
-  width: 40px; /* Smaller width for the circular handle */
-  height: 40px; /* Height matches width */
+  width: 40px; 
+  height: 40px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the circle */
+  transform: translate(-50%, -50%); 
   z-index: 10;
-  border-radius: 50%; /* Make it circular */
-  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for visibility */
+  border-radius: 50%; 
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: grab; /* Pointer cursor for interaction */
+  cursor: grab;
 }
-
-/* Add arrows inside the circular handle */
 .mover:before,
 .mover:after {
+  position:absolute;
+  left:50%;
   content: "";
-  position: absolute;
-  width: 10px; /* Width of arrows */
-  height: 10px; /* Height of arrows */
-  border-width: 2px;
-  border-style: solid;
-  border-color: #333; /* Arrow color */
+  background: #fff;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
-
 .mover:before {
-  transform: rotate(135deg);
-  border-width: 0 2px 2px 0;
-  top: 50%;
-  left: 30%;
+  top: 0;
+  transform:translateX(-50%);
+  width: 1px;
+  height: 100%;
 }
-
 .mover:after {
-  transform: rotate(-45deg);
-  border-width: 0 2px 2px 0;
   top: 50%;
-  right: 30%;
-}
-
-/* Add hover effect for better interaction */
-.mover:hover {
-  background: rgba(255, 255, 255, 1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform:translate(-50%, -50%);
+  width: 5px;
+  height: 33%;
+  border-radius: 5px;
 }
