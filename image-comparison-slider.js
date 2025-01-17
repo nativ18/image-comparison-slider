@@ -30,8 +30,8 @@
         });
         elsH[i].addEventListener("mousemove", function(e) {
             if (mouseDownX) {
-                this.style.left = parseInt(this.style.left) + (event.clientX - X) + "px";
-                X = event.clientX;
+                this.style.left = parseInt(this.style.left) + (e.clientX - X) + "px";
+                X = e.clientX;
                 this.nextElementSibling.style.clip = "rect(0px, " + (this.getBoundingClientRect().width / 2 + parseInt(this.style.left)) + "px, " + this.getBoundingClientRect().height + "px, 0px)";
             }
         });
