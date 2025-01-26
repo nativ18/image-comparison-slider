@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const rightImages = [
         "https://images.squarespace-cdn.com/content/6769debcb704bd19bef657cf/50a99eeb-f371-400f-91a1-9a7799d9b540/after.jpeg?content-type=image%2Fjpeg",
         "https://images.squarespace-cdn.com/content/6769debcb704bd19bef657cf/63bc5f2b-6387-4eb8-b9eb-6aec6ebb6c74/after_gabot.jpeg?content-type=image%2Fjpeg",
-        "https://images.squarespace-cdn.com/content/6769debcb704bd19bef657cf/1715c87f-9a49-4bd1-80b1-e2cdd537fe8a/after.jpeg?content-type=image%2Fjpeg
+        "https://images.squarespace-cdn.com/content/6769debcb704bd19bef657cf/1715c87f-9a49-4bd1-80b1-e2cdd537fe8a/after.jpeg?content-type=image%2Fjpeg"
     ];
 
     const titleText = [
